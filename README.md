@@ -43,4 +43,6 @@ The project is now added to GitHub for further work and optimization.
 * optimize calculation time
 * add loading bar
 * comment code
+* delete dead code
+* change all function names to english (sorry)
 
