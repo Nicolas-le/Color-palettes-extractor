@@ -3,7 +3,7 @@ from PIL import Image
 from collections import Counter
 
 
-def berechne():                                                                                             #color analysing function
+def berechne():                                                                          #color analysing function
 
     listMostUsed = []
 
@@ -25,22 +25,22 @@ def berechne():                                                                 
                 #if 2*r != g+b:
                 a = '#%02x%02x%02x' % (r, g, b)
                 #listMostUsed.append((r,g,b))
-                if 2*g != r+b:
+                if 2*g != r+b:								#deletes grey tones as they supress all other colors, implement on and of!
                     listMostUsed.append((a))
                 if 2*b != r+g:
                     listMostUsed.append((a))
 
     b = Counter(listMostUsed).most_common(125)
-    return b                                                                                #returned list
+    return b                                                                         	#returned list
 
-def howmany():                                                                              #counts how many files will be processed
+def howmany():                                                                       	#counts how many files will be processed
     counter = 0
     for file in glob.glob("*.jpg"):
         counter += 1
 
     return str(counter) + " images were analysed."
 
-def reduceColor(a):                                                                         #color reducing and rounding function
+def reduceColor(a):                                                                     #color reducing and rounding function
     a /= 255
     a = round(a, 2)
     a /= (0.2)
@@ -48,14 +48,14 @@ def reduceColor(a):                                                             
     a = (a * 51)
     return a
 
-def readListOne(a, list):                                                       #Teil Liste in einzelne Tupel mit Farb und Anzahlwerten
-    return list[a]                                                              #Gibt Tupel an Stelle a zurück
+def readListOne(a, list):                                                       	#split list into tuples with color and count values
+    return list[a]                                                              	#return tuple on position a
 
-def getColor(a):                                                                #Gibt speziellen Farbwert des eingegeben Tupels zurück
+def getColor(a):                                                                	#return color values of tuple
     color, number = (a)
     return color
 
-def getNumber(a):                                                               #Gibt spezielle Anzahl des Tupels zurück
+def getNumber(a):                                                               	#returns count value of tuple
     color, number = (a)
     return number
 
