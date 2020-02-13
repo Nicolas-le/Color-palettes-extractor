@@ -9,8 +9,9 @@ This tool is a **work in progress** project that started 2017 and has not been w
 >**The analysing tool**
 >[...] The tool must be effective and fast. At the moment one painting is processed in less than a second. From our point of view this is already quite fast, but nonetheless if you want to analyse for example 10000 paintings the script >will need over 2 hours. This should also be considered in another improving circle. The second task to consider was that we extracted the colours through the rig-model and this led to the fact that there are up to 16,7 million >possible colours. Because we wanted to count the colours we had to reduce the variety down to 125 colours.
 
-![Reduced Colors](https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/RGB_color_solid_cube.png/800px-RGB_color_solid_cube.png)
+![Reduced Colors](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/RGB_Cube_Show_lowgamma_cutout_b.png/1280px-RGB_Cube_Show_lowgamma_cutout_b.png = x300 )
 
+**Process of reducing the colors to 125.**
 
 A GUI was added a little bit later. At the moment the tool is capable of processing a directory of **.jpg** files and then show the main colors as a palette.
 The project is now added to GitHub for further work and optimization.
